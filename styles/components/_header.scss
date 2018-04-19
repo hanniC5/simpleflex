@@ -1,0 +1,34 @@
+header {
+    background: linear-gradient(90deg, $lightWhite 50%, $darkWhite 50%);
+}
+.wrapHeader {
+    display: flex;
+    justify-content: space-between;
+    .logoHeader {
+        padding: 20px 0;
+    }
+    .headerNav ul {
+        display: flex;
+        list-style-type: none;
+        margin-top: 35px;
+        li a{
+            padding: 35px 0;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: $textBlack;
+        }
+        li a:hover {
+            color: $textRed;
+            font-size: 1.5rem;
+        }
+        li a::after {
+           content: '|';
+           color: #efefef;
+           padding:0 30px;
+        }
+        .lastA::after {
+            content: '';
+        }
+    }
+}

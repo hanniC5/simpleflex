@@ -1,0 +1,28 @@
+//font color variables
+$textBlack: #343434;
+$textRed: #FD7070;
+$pGrey: #989898;
+
+//font familys
+$fontMain: 'Raleway', sans-serif;
+$fontSecondary: 'Open Sans', sans-serif;
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: $fontMain;
+}
+h2 {
+    color: #fff;
+    font-size: 6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+}
+p.desc {
+    font-size: 2rem;
+    font-weight: 300;
+    color: $pGrey;
+    text-align: center;
+}
