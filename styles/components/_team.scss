@@ -1,0 +1,69 @@
+section.team {
+    background: $darkest;
+    .wrapper {
+        padding: 50px 0;
+        .desc {
+            margin-bottom: 70px;
+        }
+        .desc::after {
+            content: "";
+            width: 102px;
+            border-bottom: 1px solid $pGrey;
+            height: 10px;
+            position: absolute;
+            left: 37%;
+            bottom: -30px;
+        }
+        //bottom section with team member pics
+        .teamCards {
+            width: 100%;
+            padding-top: 25%;
+            display: flex;
+            justify-content: space-between;
+            .teamMember {
+                width: 23%;
+                background: $teamGrey;
+                border-bottom: 10px solid $underRed;
+                img {
+                    width: 100%;
+                }
+                .socialIcons {
+                    display: flex;
+                    justify-content: center;
+                    margin: 10px auto;
+                    .icon {
+                        width: 30px;
+                        height: 30px;
+                        padding: 6px 6px;
+                        color: #fff;
+                        font-size: 1.4rem;
+                    }
+                    .icon2 {
+                        margin: 0 10px;
+                    }
+                    .facebook {
+                        background: $colorFb;
+                    }
+                    .google {
+                        background: $colorGoogle;
+                    }
+                    .twitter {
+                        background: $colorTwitter;
+                    }
+                    .linkdin {
+                        background: $colorLinkd;
+                    }
+                    .flickr {
+                        background: $colorFlickr;
+                    }
+                    .dribble {
+                        background: $colorDrib;
+                    }
+                    .pinterest {
+                        background: $colorPin;
+                    }
+                }
+            }
+        }
+    }
+}
