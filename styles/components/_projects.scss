@@ -1,0 +1,44 @@
+section.projects {
+    background: $darkGrey;
+    .wrapper {
+        padding-top: 50px;
+        .desc::after {
+            content: "";
+            width: 102px;
+            border-bottom: 1px solid $pGrey;
+            height: 10px;
+            position: absolute;
+            left: 37%;
+            bottom: -30px;
+        }
+        .projContainer {
+            width: 70%;
+            margin: 0 auto;
+            margin-top: 60px;
+            position: relative;
+            img {
+                width: 100%;
+                display: block;
+                border-radius: 6px 6px 0 0; 
+            }
+        }
+        .projContainer::before {
+            content: "<";
+            color: #fff;
+            font-size: 2.4rem;
+            font-weight: 300;
+            position: absolute;
+            top: 40%;
+            left: -22%;
+        }
+        .projContainer::after {
+            content: ">";
+            color: #fff;
+            font-size: 2.4rem;
+            font-weight: 300;
+            position: absolute;
+            top: 40%;
+            right: -22%;
+        }
+    }
+}

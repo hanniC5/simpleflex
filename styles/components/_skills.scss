@@ -1,0 +1,118 @@
+section.skills {
+    background: $darkest;
+    .wrapper {
+        flex-direction: column;
+        .lowerDesc {
+            display: block;
+        }
+        .desc::after {
+            content: "";
+            width: 102px;
+            border-bottom: 1px solid $pGrey;
+            height: 10px;
+            position: absolute;
+            left: 39%;
+            bottom: -25px;
+        }
+    }
+}
+/* Skills lower section */
+.skillsBottom {
+    width: 100%;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    .skillBlock {
+        width: 23%;
+        .skillImg {
+            width: 70%;
+            margin: 0 auto;
+            img {
+                width: 100%;
+            }
+        }
+        h4 {
+            text-align: center;
+            color:#fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        p {
+            text-align: center;
+            color: $pGrey;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    }
+}
+//skills quote section RED BACKGROUND AND TRIANGLES
+.skillsQuote {
+    width: 100%;
+    background: linear-gradient(90deg, $backRed 50%, $backRedDark 50%);
+    padding: 20px;
+    position: relative;
+    .quote {
+        width: 35%;
+        margin: 5% auto;
+        text-align: center;
+        position: relative;
+        h3 {
+            color: $textBlack;
+            font-size: 3.6rem;
+            font-weight: 700;
+            margin-bottom: 4%; 
+            letter-spacing: 2px;
+        }
+        p {
+            color: #fff;
+            font-size: 2.4rem;
+            font-weight: 300;
+            margin-top: 0;
+        }
+        .quoteMark {
+            display: inline-block;
+            width: 7%;
+            position: absolute;
+            img {
+                width: 100%;
+            }
+        }
+        .quoteMarkLeft {
+            top: -10%;
+            left: -10%;
+        }
+        .quoteMarkRight {
+            top: -10%; 
+            right: -10%;
+        }
+    }
+    
+
+}
+
+.skillsQuote::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 25px 25px 0;
+    border-color: transparent $backRed transparent transparent;
+    position: absolute;
+    bottom: -25px;
+    left: calc(50% - 25px);
+}
+.skillsQuote::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 25px 0 0;
+    border-color: $backRedDark transparent transparent transparent;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+}

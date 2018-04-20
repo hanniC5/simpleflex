@@ -6,7 +6,6 @@ header {
     justify-content: space-between;
     .logoHeader {
         width: 50%;
-        border: 1px solid red;
         padding: 20px 0;
         img {
             width: 30%;
@@ -14,14 +13,12 @@ header {
     }
     .headerNav {
         width: 50%;
-        border: 1px solid blue;
     }
     .headerNav ul {
         width: 100%;
         display: flex;
         list-style-type: none;
         margin-top: 30px;
-        padding: 0;
         li {
             margin: 0;
             &::after {
@@ -31,10 +28,10 @@ header {
             &:last-of-type::after {
                 content: "";
             }
-            a{
+            a {
                 padding: 15px 20px;
                 text-decoration: none;
-                font-size: 0.8rem;
+                font-size: 1rem;
                 font-weight: 300;
                 color: $textBlack;
             }
