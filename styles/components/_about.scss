@@ -1,3 +1,57 @@
 section#about {
     background: $darkGrey;
+    padding: 50px 0;
+    .wrapper {
+        flex-direction: column;
+        .desc::after {
+            content: "";
+            width: 170px;
+            border-bottom: 2px solid $pGrey;
+            height: 10px;
+            position: absolute;
+            left: 40%;
+            bottom: -36px;
+        }
+        .iconBlockContainer {
+            display: flex;
+            margin-top: 87px; /* 1% */
+            justify-content: space-between; 
+            .iconBlock {
+                width: 32%;
+                background: $middleGrey;
+                text-align: center;
+                .iconImg {
+                    width: 30%;
+                    margin: 0 auto;
+                    padding-top: 70px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                h4 {
+                    color: #fff;
+                    font-size: 2.4rem;
+                    font-weight: 700;
+                    margin-bottom: 0;
+                }
+                p {
+                    font-size: 1.6rem;
+                    font-weight: 300;
+                    color: $pGrey;
+                    line-height: 24px;
+                    padding: 0 10%;
+                    margin-bottom: 15%;
+                }
+            }
+            .first {
+                border-bottom: 10px solid $underYellow;
+            }
+            .second {
+                border-bottom: 10px solid $underRed;
+            }
+            .third {
+                border-bottom: 10px solid $underGreen;
+            }
+        }
+    }
 }

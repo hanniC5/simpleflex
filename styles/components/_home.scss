@@ -1,0 +1,69 @@
+section#home {
+    background: linear-gradient(90deg, $backYellow 50%, $backYellowDark 50%);
+}
+.homeLeft {
+    width: 50%;
+    position: relative;
+    h1 {
+        margin-top: 125px;
+        margin-bottom: 40px;
+        font-size: 4.8rem;
+        text-transform: uppercase;
+        line-height: 65px;
+        font-weight: 300;
+        color: #fff;
+        span {
+            font-weight: 700;
+            color: $textBlack;
+            letter-spacing: 1.5px;
+        }
+    }
+    .descHead {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: $textBlack;
+        text-align: left;
+        line-height: 2;
+        margin-bottom: 45px;
+    }
+    .buttonWhite {
+        margin-bottom: 200px;
+    }
+}
+.homeLeft::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 25px 25px 0;
+    border-color: transparent $backYellow transparent transparent;
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+}
+.homeRight {
+    width: 50%;
+    position: relative;
+    .homeImgContainer {
+        position: absolute;
+        width: 486px;
+        top: 27%;
+        left: -24%;
+        img {
+            width: 100%;
+        }
+    }
+}
+.homeRight::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 25px 0 0;
+    border-color: $backYellowDark transparent transparent transparent; 
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+}

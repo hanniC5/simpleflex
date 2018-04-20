@@ -1,3 +1,4 @@
+@import 'typography';
 //background color variables
 $lightWhite: #FCFCFC;
 $darkWhite: #F7F7F7;
@@ -21,5 +22,22 @@ $teamGrey: #2A2A2A;
 //GLOBAL STYLES
 .wrapper {
     width: 61%;
+    max-width: 1170;
     margin: 0 auto;
+    display: flex;
 }
+
+.buttonWhite {
+    display: block;
+    width: fit-content;
+    width: -moz-fit-content;
+    color: $textBlack;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 25px;
+    border: 2px solid #fff;
+}
+
+

@@ -5,30 +5,42 @@ header {
     display: flex;
     justify-content: space-between;
     .logoHeader {
+        width: 50%;
+        border: 1px solid red;
         padding: 20px 0;
+        img {
+            width: 30%;
+        }
+    }
+    .headerNav {
+        width: 50%;
+        border: 1px solid blue;
     }
     .headerNav ul {
+        width: 100%;
         display: flex;
         list-style-type: none;
-        margin-top: 35px;
-        li a{
-            padding: 35px 0;
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 300;
-            color: $textBlack;
-        }
-        li a:hover {
-            color: $textRed;
-            font-size: 1.5rem;
-        }
-        li a::after {
-           content: '|';
-           color: #efefef;
-           padding:0 30px;
-        }
-        .lastA::after {
-            content: '';
+        margin-top: 30px;
+        padding: 0;
+        li {
+            margin: 0;
+            &::after {
+                content: '|';
+                color: #EFEFEF;
+            }
+            &:last-of-type::after {
+                content: "";
+            }
+            a{
+                padding: 15px 20px;
+                text-decoration: none;
+                font-size: 0.8rem;
+                font-weight: 300;
+                color: $textBlack;
+            }
+            a:hover {
+                color: $textRed;
+            }
         }
     }
 }
