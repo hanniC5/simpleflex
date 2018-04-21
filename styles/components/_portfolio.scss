@@ -1,0 +1,85 @@
+section#portfolio {
+    background: $darkGrey;
+    padding: 50px 0;
+    .portfolioTop {
+        width: 61%;
+        margin: 0 auto;
+        .desc::after {
+            content: "";
+            width: 102px;
+            border-bottom: 1px solid $pGrey;
+            height: 10px;
+            position: absolute;
+            left: 37%;
+            bottom: -30px;
+        }
+        .portfolioNav {
+            text-align: center;
+            width: fit-content;
+            width: -moz-fit-content;
+            margin: 50px auto;
+            margin-bottom: 30px;
+            ul {
+                padding: 0;
+                margin: 10px;
+                display: flex;
+                list-style-type: none;
+                a {
+                    padding: 20px 15px;
+                    font-size: 0.72rem;
+                    font-weight: 700;
+                    color: #fff;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .portfolioGallery {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .galleryItem {
+            width: 25%;
+            img {
+                width: 100%;
+                display: block;
+            }
+            figcaption {
+                display: block;
+                background: #fff;
+                font-size: 0.72rem;
+                font-weight: 700;
+                color: $textBlack;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 20px;
+                position: relative;
+            }
+            figcaption::before {
+                content:"";
+                display: inline-block;
+                height: 0;
+                width: 0;
+                border-style: solid;
+                border-width: 0 10px 10px 10px;
+                border-color: transparent transparent #fff transparent;
+                position: absolute;
+                top: -10px;
+                left: calc(50% - 5px);
+            }
+        }
+    }
+    .portfolioBottom {
+        width: 61%;
+        margin: 0 auto;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+            background: transparent;
+            color: #fff;
+        }
+    }
+}

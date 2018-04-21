@@ -18,6 +18,7 @@ section.team {
         .teamCards {
             width: 100%;
             padding-top: 25%;
+            margin-bottom: 20px;
             display: flex;
             justify-content: space-between;
             .teamMember {
@@ -30,13 +31,15 @@ section.team {
                 .socialIcons {
                     display: flex;
                     justify-content: center;
-                    margin: 10px auto;
+                    margin: 15px auto;
                     .icon {
-                        width: 30px;
-                        height: 30px;
-                        padding: 6px 6px;
+                        width: 15%;
                         color: #fff;
-                        font-size: 1.4rem;
+                        // font-size: 1.2rem;
+                        i {
+                            display: block;
+                            margin: 7px auto;
+                        }
                     }
                     .icon2 {
                         margin: 0 10px;
@@ -66,4 +69,68 @@ section.team {
             }
         }
     }
+    .greenSection {
+        width: 100%;
+        background: linear-gradient(90deg, $backGreen 50%, $backGreenDark 50%);
+        position: relative;
+        .wrapper {
+            padding: 30px 0;
+            .iconCards {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                .card {
+                    width: 21%;
+                    .cardImg {
+                        width: 60%;
+                        height: 36%;
+                        margin: 0 auto;
+                        text-align: center;
+                        img {
+                            height: 100%;
+                            padding-top: 10px;
+                        } 
+                    }
+                    .cardBottom {
+                        padding: 5px;
+                        h5 {
+                            font-family: $fontSecondary;
+                            font-size: 3.6rem;
+                            font-weight: 700;
+                            line-height: 33px;
+                            margin: 10px 0;
+                        }
+                        .buttonWhite {
+                            margin: 5px auto;
+                        }
+                    }
+                }
+            }
+        }    
+    }
+    .greenSection::before {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 25px 25px 0;
+        border-color: transparent $backGreen transparent transparent;
+        position: absolute;
+        bottom: -25px;
+        left: calc(50% - 25px); 
+    }
+    .greenSection::after {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 25px 25px 0 0;
+        border-color: $backGreenDark transparent transparent transparent;
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+    }   
 }

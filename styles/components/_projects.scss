@@ -19,7 +19,8 @@ section.projects {
             img {
                 width: 100%;
                 display: block;
-                border-radius: 6px 6px 0 0; 
+                border-radius: 6px 6px 0 0;
+                border-top: 10px solid #efefef; 
             }
         }
         .projContainer::before {

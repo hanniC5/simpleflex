@@ -2,7 +2,11 @@ header {
     background: linear-gradient(90deg, $lightWhite 50%, $darkWhite 50%);
 }
 .wrapHeader {
+    width: 61%;
+    max-width: 1170;
+    margin: 0 auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     .logoHeader {
         width: 50%;
