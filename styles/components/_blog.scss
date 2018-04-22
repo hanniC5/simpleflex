@@ -1,16 +1,5 @@
 section#blog {
     background: $darkest;
-    .wrapper {
-        .desc::after {
-           content: "";
-            width: 102px;
-            border-bottom: 1px solid $pGrey;
-            height: 10px;
-            position: absolute;
-            left: 37%;
-            bottom: -30px; 
-        }
-    }
 }
 //blog previews section
 .blogPreviews {

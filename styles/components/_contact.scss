@@ -1,0 +1,52 @@
+section#contact {
+    background: $darkest;
+    .socialIconsBottom {
+        margin: 20px 0;
+        ul {
+            padding: 0;
+            margin: 20px auto;
+            list-style-type: none;
+            width: fit-content;
+            width: -moz-fit-content;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            .sIcon {
+                margin: 2.5px;
+                a {
+                    display: block;
+                    padding: 5px 5px;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    form {
+        width: 50%;
+        margin: 0 auto 30px;
+        display: flex;
+        flex-flow: column wrap;
+        input:not(:last-of-type), 
+        textarea {
+            text-align: center;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            background: $teamGrey;
+            color: $pGrey;
+            &:focus {
+                border: 1px solid $backRed;
+                background: white;
+            }
+        }
+        textarea {
+            resize: none;
+        }
+        .buttonWhite {
+            margin: 10px auto;
+            background: transparent;
+            color: #fff;
+        }
+    }
+}

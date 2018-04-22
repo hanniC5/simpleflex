@@ -46,6 +46,29 @@ $colorDrib: #F26999;
     text-decoration: none;
     padding: 15px 35px;
     border: 2px solid #fff;
+    margin-bottom: 10px;
+}
+//social icons backgrounds - style for <a> links
+.sFacebook {
+    background: $colorFb;
+}
+.sTwitter {
+    background: $colorTwitter;
+}
+.sFlickr {
+    background: $colorFlickr;
+}
+.sGoogle {
+    background: $colorGoogle;
+}
+.sLinkdin {
+    background: $colorLinkd;
+}
+.sDribble {
+    background: $colorDrib;
+}
+.sPinterest {
+    background: $colorPin;
 }
 
 

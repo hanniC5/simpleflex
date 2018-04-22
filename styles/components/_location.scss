@@ -1,0 +1,61 @@
+section.location {
+    background: linear-gradient(90deg, $backYellow 50%, $backYellowDark 50%);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    .sectionTop {
+        padding: 5% 0;
+        text-align: center;
+        position: relative;
+        h4 {
+            color: #fff;
+            font-size: 2.4rem;
+            margin: 0;
+        }
+        h1 {
+            color: $textBlack;
+            font-size: 4.8rem;
+            border: 2px solid #fff;
+            width: 90%;
+            padding: 10px 15px;
+            margin: 5px auto;
+        }
+        p {
+            color: $textBlack;
+            font-size: 1.8rem;
+            font-weight: 300;
+            text-transform: capitalize;
+            margin: 5px;
+        }
+    }
+    .sectionTop::before {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 25px 25px 0;
+        border-color: transparent $backYellow transparent transparent;
+        position: absolute;
+        bottom: -25px;
+        left: calc(50% - 25px);
+    }
+    .sectionTop::after {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 25px 25px 0 0;
+        border-color: $backYellowDark transparent transparent transparent;
+        position: absolute;
+        bottom: -25px;
+        right: calc(50% - 25px);
+    }
+    .sectionBottom {
+        width: 100%;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}

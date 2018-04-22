@@ -1,0 +1,83 @@
+.footerTop {
+    background: linear-gradient(90deg, $lightWhite 50%, $darkWhite 50%);
+    padding: 10px;
+    .footerContainer {
+        margin: 40px auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        .footerFourth {
+            flex-basis: 165px;
+            h4 {
+                margin: 10px 0;
+                font-size: 1.5rem;
+                color: $textBlack;
+                font-weight: 700;
+            }
+            p {
+                font-size: 1rem;
+                font-weight: 300;
+                color: $pGrey;
+                line-height: 1.5;
+                margin: 0;
+            }
+            img {
+                width: 100%;   
+            }
+            .postPreview {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 7px;
+                .imgholder {
+                    width: 30%;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .postDesc {
+                    width: 60%;
+                    p {
+                        color: #242424;
+                        line-height: 1.2;
+                    }
+                    .postDate {
+                        color: $pGrey;
+                        margin: 2px 0;
+                    }
+                }
+            }
+            form {
+                width: 100%;
+                input[type=email] {
+                    width: 65%;
+                    margin-top: 5px;
+                    padding: 6px;
+                    border: none;
+                    background: #EBEBEB;
+                }
+                input[type=submit] {
+                    width: 30%;
+                    margin-top: 5px;
+                    margin-left: 3px;
+                    border: 2px solid $backRed;
+                    background: transparent;
+                    font-size: 0.72rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: $backRed;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}
+.footerCopy {
+    background: $darkest;
+    padding: 20px;
+    text-align: center;
+    color: $pGrey;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+}

@@ -4,15 +4,6 @@ section#portfolio {
     .portfolioTop {
         width: 61%;
         margin: 0 auto;
-        .desc::after {
-            content: "";
-            width: 102px;
-            border-bottom: 1px solid $pGrey;
-            height: 10px;
-            position: absolute;
-            left: 37%;
-            bottom: -30px;
-        }
         .portfolioNav {
             text-align: center;
             width: fit-content;
