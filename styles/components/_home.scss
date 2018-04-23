@@ -18,10 +18,11 @@ section#home {
         span {
             font-weight: 700;
             color: $textBlack;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.5;
         }
     }
     .descHead {
+        width: 80%;
         font-size: 1.2rem;
         font-weight: 300;
         color: $textBlack;
@@ -30,7 +31,11 @@ section#home {
         margin-bottom: 45px;
     }
     .buttonWhite {
-        margin-bottom: 110px;
+        margin-bottom: 30%;
+    }
+    a.buttonWhite:hover {
+        background: #fff;
+        color: $textBlack;
     }
 }
 .homeLeft::after {
@@ -42,7 +47,7 @@ section#home {
     border-width: 0 25px 25px 0;
     border-color: transparent $backYellow transparent transparent;
     position: absolute;
-    bottom: -25px;
+    bottom: -24px;
     right: 0;
 }
 .homeRight {
@@ -50,7 +55,7 @@ section#home {
     position: relative;
     .homeImgContainer {
         position: absolute;
-        width: 486px;
+        width: 135%;
         top: 29%;
         left: -24%;
         img {
@@ -67,6 +72,18 @@ section#home {
     border-width: 25px 25px 0 0;
     border-color: $backYellowDark transparent transparent transparent; 
     position: absolute;
-    bottom: -25px;
+    bottom: -24px;
     left: 0;
+}
+//media query for larger screen sizes 
+@media (min-width: 1280px) and (max-width: 1920px) {
+    .homeLeft h1 {
+        font-size: 8rem;
+        line-height: 65px;
+        margin-top: 200px;
+    }
+    .homeLeft .descHead {
+        font-size: 2rem;
+    }
+
 }

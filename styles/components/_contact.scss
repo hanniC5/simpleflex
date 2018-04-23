@@ -1,27 +1,9 @@
 section#contact {
     background: $darkest;
-    .socialIconsBottom {
-        margin: 20px 0;
-        ul {
-            padding: 0;
-            margin: 20px auto;
-            list-style-type: none;
-            width: fit-content;
-            width: -moz-fit-content;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-evenly;
-            .sIcon {
-                margin: 2.5px;
-                a {
-                    display: block;
-                    padding: 5px 5px;
-                    color: #fff;
-                    text-decoration: none;
-                }
-            }
-        }
+    .desc {
+        margin-bottom: 30px;
     }
+    //social icons styled by utility class
     form {
         width: 50%;
         margin: 0 auto 30px;
@@ -47,6 +29,22 @@ section#contact {
             margin: 10px auto;
             background: transparent;
             color: #fff;
+        }
+    }
+}
+//media query for large screen size including PSD specifications
+@media (min-width: 1280px) and (max-width: 1920px) {
+    section#contact {
+        form {
+            input:not(:last-of-type), 
+            textarea {
+                font-size: 1.6rem;
+                padding: 20px;
+            }
+            .buttonWhite:hover {
+                background: #fff;
+                color: $textBlack;
+            }
         }
     }
 }

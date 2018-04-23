@@ -22,6 +22,11 @@ section#portfolio {
                     color: #fff;
                     text-decoration: none;
                     text-transform: uppercase;
+                    transition: font-size 0.5s ease;
+                }
+                a:hover {
+                    color: $textRed;
+                    font-size: 1rem;
                 }
             }
         }
@@ -56,9 +61,13 @@ section#portfolio {
                 border-width: 0 10px 10px 10px;
                 border-color: transparent transparent #fff transparent;
                 position: absolute;
-                top: -10px;
+                top: -9px;
                 left: calc(50% - 5px);
             }
+        }
+        .galleryItem:hover img {
+            animation: spinPic 0.7s forwards;
+            z-index: 9;
         }
     }
     .portfolioBottom {
@@ -71,6 +80,29 @@ section#portfolio {
         button {
             background: transparent;
             color: #fff;
+        }
+        button:hover {
+            background: #fff;
+            color: $textBlack;
+        }
+    }
+}
+//media query for large screen sizes up to and including PSD width
+@media (min-width: 1280px) and (max-width: 1920px) {
+    section#portfolio {
+        .portfolioTop .portfolioNav ul li {
+            a {
+                font-size: 1.2rem;
+                transition: font-size 0.5s;
+            }
+            a:hover {
+                font-size: 1.4rem;
+            }
+        }
+        .portfolioGallery {
+            .galleryItem figcaption {
+                font-size: 1.2rem;
+            }
         }
     }
 }

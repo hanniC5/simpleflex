@@ -48,6 +48,32 @@ $colorDrib: #F26999;
     border: 2px solid #fff;
     margin-bottom: 10px;
 }
+
+//social Icons 
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    ul {
+        padding: 0;
+        margin: 10px auto;
+        list-style-type: none;
+        width: fit-content;
+        width: -moz-fit-content;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        .sIcon {
+            margin: 2.5px;
+            a {
+                display: block;
+                padding: 5px 5px;
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}
 //social icons backgrounds - style for <a> links
 .sFacebook {
     background: $colorFb;
@@ -71,4 +97,54 @@ $colorDrib: #F26999;
     background: $colorPin;
 }
 
+//gallery image animation 
+@keyframes spinPic {
+    0% { 
+        transform: scale(0) rotate(0deg); 
+    }
+    15% {
+        transform: scale(0.15) rotate(45deg);
+    }
+    25% {
+        transform: scale(0.35) rotate(90deg);
+    }
+    35% {
+        transform: scale(0.6) rotate(135deg);
+    }
+    50% {
+        transform: scale(0.7) rotate(180deg);
+    }   
+    65% {
+        transform: scale(1) rotate(225deg);
+    }
+    75% {
+        transform: scale(1.15) rotate(270deg);
+    }
+    90% {
+        transform: scale(1.35) rotate(315deg);
+    }
+    100% { 
+        transform: scale(1.5) rotate(360deg); 
+    }
+}
 
+//global media query: for larger screen size, scale everything to PSD specifications (currently at 60%)
+@media (min-width: 1280px) and (max-width: 1920px) {
+    .wrapper {
+        width: 61.2%;
+        max-width: 1170px
+    }
+    .buttonWhite {
+        font-size: 1.2rem;
+        border: 3px solid #fff;
+    }
+    .socialIcons {
+        ul .sIcon {
+            margin: 5px;
+            a {
+                padding: 10px;
+                font-size: 1.7rem;
+            }
+        }
+    }
+}

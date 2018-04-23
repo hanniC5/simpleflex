@@ -1,46 +1,94 @@
 header {
     background: linear-gradient(90deg, $lightWhite 50%, $darkWhite 50%);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid $pGrey;
 }
 .wrapHeader {
     width: 61%;
-    max-width: 1170;
+    max-width: 691.2px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     .logoHeader {
         width: 50%;
-        padding: 20px 0;
+        padding: 10px 0;
         img {
-            width: 30%;
+            display: block;
+            width: 105px;
+            margin-top: 10px;
         }
     }
     .headerNav {
         width: 50%;
+        display: flex;
+        justify-content: flex-end;
     }
     .headerNav ul {
-        width: 100%;
+        width: fit-content;
+        width: -moz-fit-content;
         display: flex;
         list-style-type: none;
-        margin-top: 30px;
+        margin-top: 15px;
+        padding: 15px;
         li {
             margin: 0;
-            &::after {
-                content: '|';
-                color: #EFEFEF;
-            }
-            &:last-of-type::after {
-                content: "";
-            }
+            border-right: 1px solid #efefef;
             a {
-                padding: 15px 20px;
+                display: block;
+                padding: 0 10px;
                 text-decoration: none;
                 font-size: 1rem;
                 font-weight: 300;
                 color: $textBlack;
+                padding: 0 12px;
             }
             a:hover {
                 color: $textRed;
+                transform: scale(1.5);
+            }
+        }
+        .lastA {
+            border-right: none;
+        }
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1920px) {
+    .wrapHeader {
+        width: 61%;
+        max-width: 1170px;
+        .logoHeader img {
+            width: 182px;
+        }
+        .headerNav ul li a {
+            font-size: 1.3rem;
+        }
+    }
+}
+@media (max-width: 815px) {
+    .wrapHeader {
+        flex-direction: column;
+        align-content: center;
+        .logoHeader {
+            width: 60%;
+            margin: 0 auto;
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .headerNav {
+            margin: 0 auto;
+            width: 60%;
+            ul {
+                padding: 10px 0;
+                margin: 0;
+                li::after {
+                    content: '';
+                }
             }
         }
     }

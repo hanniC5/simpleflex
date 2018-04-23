@@ -42,3 +42,13 @@ p.desc {
     left: calc(50% - 50px);
     bottom: -25px;
 }
+
+//media query for larger screens up to and including the width of the PSD 
+@media (min-width: 1280px) and (max-width: 1920px) {
+    h2 {
+        font-size: 6rem;
+    }
+    p.desc {
+        font-size: 2rem;
+    }
+}

@@ -89,7 +89,7 @@ section.skills {
     border-width: 0 25px 25px 0;
     border-color: transparent $backRed transparent transparent;
     position: absolute;
-    bottom: -25px;
+    bottom: -24px;
     left: calc(50% - 25px);
 }
 .skillsQuote::after {
@@ -101,6 +101,35 @@ section.skills {
     border-width: 25px 25px 0 0;
     border-color: $backRedDark transparent transparent transparent;
     position: absolute;
-    bottom: -25px;
+    bottom: -24px;
     left: 50%;
+}
+
+//media query for large screen size including PSD specifications
+@media (min-width: 1280px) and (max-width: 1920px) {
+    .skillsBottom .skillBlock {
+        h4 {
+            font-size: 2.4rem;
+        }
+        p {
+            font-size: 1.6rem;
+        }
+    }
+    .skillsQuote .quote {
+        h3 {
+            font-size: 6rem;
+        }
+        p {
+            font-size: 4rem;
+        }
+        .quoteMark {
+            width: 10%;
+        }
+        .quoteMarkLeft {
+            left: -13%;
+        }
+        .quoteMarkRight {
+            right: -11%;
+        }
+    }
 }

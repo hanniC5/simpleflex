@@ -36,7 +36,7 @@ section.location {
         border-width: 0 25px 25px 0;
         border-color: transparent $backYellow transparent transparent;
         position: absolute;
-        bottom: -25px;
+        bottom: -24px;
         left: calc(50% - 25px);
     }
     .sectionTop::after {
@@ -48,7 +48,7 @@ section.location {
         border-width: 25px 25px 0 0;
         border-color: $backYellowDark transparent transparent transparent;
         position: absolute;
-        bottom: -25px;
+        bottom: -24px;
         right: calc(50% - 25px);
     }
     .sectionBottom {
@@ -56,6 +56,21 @@ section.location {
         img {
             width: 100%;
             display: block;
+        }
+    }
+}
+
+//media query for large screen size including PSD specifications
+@media (min-width: 1280px) and (max-width: 1920px) {
+    section.location .sectionTop .wrapper {
+        h4 {
+            font-size: 4rem;
+        }
+        h1 {
+            font-size: 8rem;
+        }
+        p {
+            font-size: 3rem;
         }
     }
 }

@@ -34,37 +34,6 @@ section#blog {
             width: 80%;
             margin: 7px auto;
         }
-        .blogIcons {
-            width: 50%;
-            margin: 10px auto;
-            ul {
-                width: 100%;
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
-                display: flex;
-                justify-content: space-around;
-                li {
-                    padding: 0;
-                    margin: 2px;
-                    a {
-                        color: #fff;
-                        text-decoration: none;
-                        font-size: 1.1rem;
-                        padding: 5px;
-                    }
-                    .bFacebook {
-                        background: $colorFb;
-                    }
-                    .bTwitter {
-                        background: $colorTwitter;
-                    }
-                    .bGoogle {
-                        background: $colorGoogle;
-                    }
-                }
-            }
-        }
     }
     .blogLeft {
         background: $teamGrey;
@@ -90,9 +59,11 @@ section#blog {
             display: flex;
             flex-direction: row;
             .image {
-                width: 48%;
+                width: 50%;
                 img {
                     width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
             .description {
@@ -114,5 +85,26 @@ section#blog {
     .buttonWhite {
         background: transparent;
         color: #fff;
+    }
+    .buttonWhite:hover {
+        background: #fff;
+        color: $textBlack;
+    }
+}
+
+//media query for large screen size including PSD specifications
+@media (min-width: 1280px) and (max-width: 1920px) {
+    .blogPreviews {
+        .blogLeft, .blogRight {
+            h4 {
+                font-size: 2.4rem;
+            }
+            h5 {
+                font-size: 1.2rem;
+            }
+            .descBlog {
+                font-size: 1.6rem;
+            }
+        }
     }
 }

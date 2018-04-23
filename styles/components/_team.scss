@@ -8,7 +8,6 @@ section.team {
         //bottom section with team member pics
         .teamCards {
             width: 100%;
-            padding-top: 25%;
             margin-bottom: 20px;
             display: flex;
             justify-content: space-between;
@@ -19,44 +18,7 @@ section.team {
                 img {
                     width: 100%;
                 }
-                .socialIcons {
-                    display: flex;
-                    justify-content: center;
-                    margin: 15px auto;
-                    .icon {
-                        width: 15%;
-                        color: #fff;
-                        // font-size: 1.2rem;
-                        i {
-                            display: block;
-                            margin: 7px auto;
-                        }
-                    }
-                    .icon2 {
-                        margin: 0 10px;
-                    }
-                    .facebook {
-                        background: $colorFb;
-                    }
-                    .google {
-                        background: $colorGoogle;
-                    }
-                    .twitter {
-                        background: $colorTwitter;
-                    }
-                    .linkdin {
-                        background: $colorLinkd;
-                    }
-                    .flickr {
-                        background: $colorFlickr;
-                    }
-                    .dribble {
-                        background: $colorDrib;
-                    }
-                    .pinterest {
-                        background: $colorPin;
-                    }
-                }
+                //social icons styled by utility class
             }
         }
     }
@@ -109,7 +71,7 @@ section.team {
         border-width: 0 25px 25px 0;
         border-color: transparent $backGreen transparent transparent;
         position: absolute;
-        bottom: -25px;
+        bottom: -24px;
         left: calc(50% - 25px); 
     }
     .greenSection::after {
@@ -121,7 +83,26 @@ section.team {
         border-width: 25px 25px 0 0;
         border-color: $backGreenDark transparent transparent transparent;
         position: absolute;
-        bottom: -25px;
+        bottom: -24px;
         left: 50%;
     }   
+}
+//media query for large screen size including PSD specifications
+@media (min-width: 1280px) and (max-width: 1920px) {
+    section.team .greenSection .wrapper {
+        padding: 80px 0;
+        .iconCards .card {
+            .cardImg {
+                width: 64%;
+                height: 40%;
+            }
+            .cardBottom h5 {
+                font-size: 6rem;
+                margin: 20px;
+            }
+            .cardBottom .buttonWhite {
+                margin-top: 15px;
+            }
+        }
+    } 
 }
