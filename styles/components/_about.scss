@@ -59,3 +59,20 @@ section#about {
         }
     }
 }
+
+//media query for landscape phones and down
+@media (max-width: 480px) {
+    section#about .wrapper {
+        .iconBlockContainer {
+            flex-direction: column;
+            .iconBlock {
+                width: 100%;
+                margin-bottom: 20px;
+                p {
+                    font-size: 1.2rem;
+                    margin-bottom: 15px;
+                }
+            }
+        } 
+    }
+}
