@@ -6,7 +6,7 @@ section#blog {
     width: 100%;
     margin: 50px auto;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     .blogLeft, 
     .blogRight {

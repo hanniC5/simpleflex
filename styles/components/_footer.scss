@@ -76,6 +76,10 @@
                     color: $backRed;
                     padding: 5px;
                 }
+                input[type=submit]:hover {
+                    background: $backRed;
+                    color: #fff;
+                }
             }
         }
     }
@@ -111,5 +115,33 @@
     } 
     .footerCopy {
         font-size: 1.3rem;
+    }
+}
+//media query for mid range screen sizes ie tablet
+@media (max-width: 1000px) { /* breakpoint */
+    .footerTop .footerContainer {
+        width: 80%;
+    }
+}
+@media (max-width: 815px) {
+    .footerTop .footerContainer {
+        .footerFourth {
+            width: calc(50% - 10px);
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;    
+        }
+    }
+}
+//media query for mobile screen sizes 
+@media (max-width: 480px) {
+    .footerTop .footerContainer {
+        width: 80%;
+        .footerFourth {
+            width: 100%;
+            p {
+                font-size: 1.2rem;
+            } 
+        }
     }
 }

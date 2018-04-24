@@ -30,6 +30,10 @@ section#contact {
             background: transparent;
             color: #fff;
         }
+        .buttonWhite:hover {
+            background: #fff;
+            color: $textBlack;
+        }
     }
 }
 //media query for large screen size including PSD specifications
@@ -46,5 +50,11 @@ section#contact {
                 color: $textBlack;
             }
         }
+    }
+}
+//media to increase form size on smaller screens (tablet --> mobile) 
+@media (max-width: 815px) {
+    section#contact form {
+        width: 70%;
     }
 }

@@ -6,25 +6,26 @@ section.location {
         padding: 5% 0;
         text-align: center;
         position: relative;
-        h4 {
-            color: #fff;
-            font-size: 2.4rem;
-            margin: 0;
-        }
-        h1 {
-            color: $textBlack;
-            font-size: calc(4.8rem * 1vw);
-            border: 2px solid #fff;
-            width: 90%;
-            padding: 10px 15px;
-            margin: 5px auto;
-        }
-        p {
-            color: $textBlack;
-            font-size: 1.8rem;
-            font-weight: 300;
-            text-transform: capitalize;
-            margin: 5px;
+        .wrapper {
+            h4 {
+                color: #fff;
+                font-size: calc(1rem + 1.6vw);
+                margin: 0;
+            }
+            h1 {
+                color: $textBlack;
+                font-size: calc(1rem + 3.6vw);
+                border: 0.5vw solid #fff;
+                padding: 10px 5rem;
+                margin: 5px auto;
+            }
+            p {
+                color: $textBlack;
+                font-size: calc(1rem + 1vw);
+                font-weight: 300;
+                text-transform: capitalize;
+                margin: 5px;
+            }
         }
     }
     .sectionTop::before {
@@ -61,16 +62,16 @@ section.location {
 }
 
 //media query for large screen size including PSD specifications
-@media (min-width: 1280px) and (max-width: 1920px) {
-    section.location .sectionTop .wrapper {
-        h4 {
-            font-size: 4rem;
-        }
-        h1 {
-            font-size: 2vw;
-        }
-        p {
-            font-size: 3rem;
-        }
-    }
-}
+// @media (min-width: 1280px) and (max-width: 1920px) {
+//     section.location .sectionTop .wrapper {
+//         h4 {
+//             font-size: 4rem;
+//         }
+//         h1 {
+//             font-size: 4vw;
+//         }
+//         p {
+//             font-size: 3rem;
+//         }
+//     }
+// }
