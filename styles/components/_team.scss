@@ -106,3 +106,70 @@ section.team {
         }
     } 
 }
+
+//media query for mid-sized screens 
+@media (max-width: 815px) {
+    section.team .wrapper {
+        width: 70%;
+        .desc {
+            width: 70%;
+        }
+        .teamCards {
+            flex-wrap: wrap;
+            .teamMember {
+                width: 45%;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    section.team .greenSection .wrapper {
+        .iconCards {
+            flex-wrap: wrap;
+            .card {
+                width: 45%;
+                margin-bottom: 15px;
+                .cardBottom .buttonWhite {
+                    padding: 5px 10px;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+//media query for mobile screens 
+@media (max-width: 480px) {
+    section.team .wrapper {
+        .teamCards .teamMember {
+            width: 90%;
+            margin: 10px auto;
+        }
+    }
+    section.team .greenSection .wrapper {
+        .iconCards {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            .card {
+                width: 50%;
+                .cardImg {
+                    border: 1px solid green;
+                    img {
+                        width: 100%;
+                        border: 2px solid pink;
+                    }
+                }
+                .cardBottom .buttonWhite {
+                    margin-top: 10px;
+                    padding: 5px 10px;
+                    font-size: 1.4rem;
+                }
+            }
+            .card2 {
+                .cardImg {
+                    width: 45%;
+                }
+            }
+        }
+    }
+}

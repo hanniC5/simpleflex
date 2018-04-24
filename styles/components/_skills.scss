@@ -7,7 +7,6 @@ section.skills {
         }
     }
 }
-/* Skills lower section */
 .skillsBottom {
     width: 100%;
     margin-top: 45px;
@@ -131,5 +130,42 @@ section.skills {
         .quoteMarkRight {
             right: -11%;
         }
+    }
+}
+//media query for mid-sized screens
+@media (max-width: 815px) {
+    section.skills .wrapper .desc {
+        width: 80%;
+    }
+    .skillsBottom {
+        .skillBlock {
+            width: 50%;
+            margin-bottom: 15px;
+            .skillImg {
+                width: 50%;
+            }
+        }
+    }
+    .skillsQuote .quote{
+        width: 60%;
+    }
+}
+
+//media query for small screen sizes 
+@media (max-width: 480px) {
+    .skillsBottom {
+        .skillBlock {
+            width: 50%;
+            margin-bottom: 10px;
+            .skillImg {
+                width: 50%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .skillsQuote .quote {
+        width: 60%;
     }
 }

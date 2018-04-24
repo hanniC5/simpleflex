@@ -6,7 +6,7 @@ section#blog {
     width: 100%;
     margin: 50px auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     .blogLeft, 
     .blogRight {
@@ -36,6 +36,7 @@ section#blog {
         }
     }
     .blogLeft {
+        margin-right: 20px;
         background: $teamGrey;
         border-bottom: 10px solid $backYellow;
         img {
@@ -68,10 +69,14 @@ section#blog {
             }
             .description {
                 width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
         }
         .rightTop {
             border-right: 10px solid $backRed;
+            margin-bottom: 20px;
         }
         .rightBottom {
             border-right: 10px solid $underGreen;
@@ -104,6 +109,45 @@ section#blog {
             }
             .descBlog {
                 font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+//media query for mid screen sizes (tablet)
+@media (max-width: 815px) {
+    .blogPreviews {
+        .blogLeft, .blogRight {
+            width: 90%;
+            margin: 20px auto;
+            .description {
+                .descBlog {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+//media query for mobile screen sizes
+@media (max-width:480px) {
+    .blogPreviews {
+        .blogRight {
+            .rightTop,
+            .rightBottom {
+                flex-direction: column;
+                .image, 
+                .description {
+                    width: 80%;
+                    margin: 10px auto;
+                }
+            }
+            .rightTop {
+                border-right: none;
+                border-bottom: 10px solid $underRed;
+            }
+            .rightBottom {
+                border-right: none;
+                border-bottom: 10px solid $underGreen;
             }
         }
     }

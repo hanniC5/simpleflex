@@ -51,6 +51,7 @@ section#portfolio {
                 text-align: center;
                 padding: 20px;
                 position: relative;
+                z-index: 0;
             }
             figcaption::before {
                 content:"";
@@ -67,7 +68,7 @@ section#portfolio {
         }
         .galleryItem:hover img {
             animation: spinPic 0.7s forwards;
-            z-index: 9;
+            z-index: 10;
         }
     }
     .portfolioBottom {
@@ -102,6 +103,61 @@ section#portfolio {
         .portfolioGallery {
             .galleryItem figcaption {
                 font-size: 1.2rem;
+            }
+        }
+    }
+}
+//media query for medium screen sizes 
+@media (max-width: 815px) {
+    section#portfolio {
+        .desc {
+            width: 80%;
+        }
+        .portfolioGallery {
+            .galleryItem {
+                width: 50%;
+                img {
+                    transition: all 0.5s ease;
+                }
+                figcaption {
+                    font-size: 1.2rem;
+                }
+            }
+            .galleryItem:hover img {
+                animation: none;
+                transform: scale(1.5);
+            }
+        }
+    }
+}
+//media query for mobile screens
+@media (max-width: 480px) {
+    section#portfolio {
+        .portfolioTop .portfolioNav {
+            ul {
+                margin: 10px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+                li {
+                    margin: 5px;
+                    a {
+                        margin: 5px;
+                        padding: 10px 5px;
+                    }
+                    a:hover {
+                        color: $textRed;
+                        font-size: 0.72rem;
+                    }
+                }
+            }
+        }
+        .portfolioGallery {
+            .galleryItem {
+                width: 80%;
+                margin: 0 auto;
+            }
+            .galleryItem:hover img {
+                transform: none;
             }
         }
     }

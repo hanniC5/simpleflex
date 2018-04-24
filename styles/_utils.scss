@@ -148,3 +148,9 @@ $colorDrib: #F26999;
         }
     }
 }
+//keyframe for wider wrapper at smaller screens
+@media (max-width: 815px) {
+    .wrapper {
+        width: 80%;
+    }
+}

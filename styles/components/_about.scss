@@ -60,6 +60,23 @@ section#about {
     }
 }
 
+//mid-size screens (tablets etc) 
+@media (max-width: 815px) {
+    section#about .wrapper {
+        .desc {
+            width: 80%;
+        }
+        .iconBlockContainer {
+            flex-direction: column;
+            align-items: center;
+            .iconBlock {
+                width: 80%;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
 //media query for landscape phones and down
 @media (max-width: 480px) {
     section#about .wrapper {

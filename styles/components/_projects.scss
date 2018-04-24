@@ -34,3 +34,14 @@ section.projects {
         }
     }
 }
+//media query to make image larger at smaller screen sizes
+@media (max-width:815px) {
+    section.projects .wrapper {
+        .desc {
+            width: 70%;
+        }
+        .projContainer {
+            width: 90%;
+        }
+    }
+}
