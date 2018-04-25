@@ -40,6 +40,8 @@ section#portfolio {
             img {
                 width: 100%;
                 display: block;
+                position:relative;
+                z-index: 1;
             }
             figcaption {
                 display: block;
@@ -68,7 +70,7 @@ section#portfolio {
         }
         .galleryItem:hover img {
             animation: spinPic 0.7s forwards;
-            z-index: 10;
+            z-index: 100;
         }
     }
     .portfolioBottom {
