@@ -507,7 +507,8 @@ section#home {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
-  flex-direction: row; }
+  flex-direction: row;
+  position: relative; }
 
 .homeLeft {
   width: 50%;
@@ -572,6 +573,28 @@ section#home {
   position: absolute;
   bottom: -24px;
   left: 0; }
+
+.dotNav {
+  width: -webkit-fit-content;
+  width: fit-content;
+  width: -moz-fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 92%;
+  left: calc(50% - 30px); }
+  .dotNav .dot {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin: 5px; }
+  .dotNav .dot:focus {
+    border-color: #1F1F1F; }
+  .dotNav .dot:hover {
+    border-color: #1F1F1F; }
 
 @media (min-width: 1280px) and (max-width: 1920px) {
   .homeLeft h1 {
@@ -685,8 +708,36 @@ section#about {
     -ms-flex-align: center;
     align-items: center; }
     section#about .wrapper .iconBlockContainer .iconBlock {
-      width: 80%;
-      margin-bottom: 15px; } }
+      width: 60%;
+      margin-bottom: 15px; }
+      section#about .wrapper .iconBlockContainer .iconBlock p {
+        font-size: 1.4rem; }
+  section#about .wrapper .iconBlockContainer .first {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    position: relative; }
+    section#about .wrapper .iconBlockContainer .first::after {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 60%;
+      border-bottom: 2px dashed #989898;
+      position: absolute;
+      top: 50%;
+      left: 90%; }
+  section#about .wrapper .iconBlockContainer .third {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    position: relative; }
+    section#about .wrapper .iconBlockContainer .third::after {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 60%;
+      border-bottom: 2px dashed #989898;
+      position: absolute;
+      top: 50%;
+      right: 90%; } }
 
 @media (max-width: 480px) {
   section#about .wrapper .iconBlockContainer {
@@ -790,6 +841,7 @@ section.skills {
   border-color: transparent #FA7072 transparent transparent;
   position: absolute;
   bottom: -24px;
+  right: 0;
   left: calc(50% - 25px); }
 
 .skillsQuote::after {
@@ -802,6 +854,7 @@ section.skills {
   border-color: #F26C6E transparent transparent transparent;
   position: absolute;
   bottom: -24px;
+  left: 0;
   left: 50%; }
 
 @media (min-width: 1280px) and (max-width: 1920px) {
@@ -948,6 +1001,7 @@ section.team {
     border-color: transparent #A8CF69 transparent transparent;
     position: absolute;
     bottom: -24px;
+    right: 0;
     left: calc(50% - 25px); }
   section.team .greenSection::after {
     content: "";
@@ -959,6 +1013,7 @@ section.team {
     border-color: #A3C866 transparent transparent transparent;
     position: absolute;
     bottom: -24px;
+    left: 0;
     left: 50%; }
 
 @media (min-width: 1280px) and (max-width: 1920px) {
@@ -1350,6 +1405,7 @@ section.location {
     border-color: transparent #F7CD69 transparent transparent;
     position: absolute;
     bottom: -24px;
+    right: 0;
     left: calc(50% - 25px); }
   section.location .sectionTop::after {
     content: "";
@@ -1361,7 +1417,8 @@ section.location {
     border-color: #EFC765 transparent transparent transparent;
     position: absolute;
     bottom: -24px;
-    right: calc(50% - 25px); }
+    left: 0;
+    left: 50%; }
   section.location .sectionBottom {
     width: 100%; }
     section.location .sectionBottom img {

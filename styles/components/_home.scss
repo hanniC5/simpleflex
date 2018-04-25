@@ -3,6 +3,7 @@ section#home {
 }
 #home .wrapper {
     flex-direction: row;
+    position: relative;
 }
 .homeLeft {
     width: 50%;
@@ -39,16 +40,7 @@ section#home {
     }
 }
 .homeLeft::after {
-    content: "";
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 25px 25px 0;
-    border-color: transparent $backYellow transparent transparent;
-    position: absolute;
-    bottom: -24px;
-    right: 0;
+    @include leftTriangle($backYellow);
 }
 .homeRight {
     width: 50%;
@@ -64,16 +56,29 @@ section#home {
     }
 }
 .homeRight::after {
-    content: "";
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 25px 25px 0 0;
-    border-color: $backYellowDark transparent transparent transparent; 
+    @include rightTriangle($backYellowDark);
+}
+.dotNav {
+    width: fit-content;
+    width: -moz-fit-content;
+    display: flex;
     position: absolute;
-    bottom: -24px;
-    left: 0;
+    top: 92%;
+    left: calc(50% - 30px);
+    .dot {
+        display: block;
+        height: 10px;
+        width: 10px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        margin: 5px;
+    }
+    .dot:focus {
+        border-color: $darkest;
+    }
+    .dot:hover {
+        border-color: $darkest;
+    }
 }
 //media query for larger screen sizes 
 @media (min-width: 1280px) and (max-width: 1920px) {

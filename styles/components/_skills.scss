@@ -80,27 +80,11 @@ section.skills {
     }
 }
 .skillsQuote::before {
-    content: "";
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 25px 25px 0;
-    border-color: transparent $backRed transparent transparent;
-    position: absolute;
-    bottom: -24px;
+    @include leftTriangle($backRed);
     left: calc(50% - 25px);
 }
 .skillsQuote::after {
-    content: "";
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 25px 25px 0 0;
-    border-color: $backRedDark transparent transparent transparent;
-    position: absolute;
-    bottom: -24px;
+    @include rightTriangle($backRedDark);
     left: 50%;
 }
 

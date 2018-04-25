@@ -127,6 +127,31 @@ $colorDrib: #F26999;
         transform: scale(1.5) rotate(360deg); 
     }
 }
+//mixin for before and after triangles in coloured sections 
+@mixin leftTriangle($backgroundColor) {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 25px 25px 0;
+    border-color: transparent $backgroundColor transparent transparent;
+    position: absolute;
+    bottom: -24px;
+    right: 0;
+}
+@mixin rightTriangle($backgroundColor) {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 25px 0 0;
+    border-color: $backgroundColor transparent transparent transparent; 
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+}
 
 //global media query: for larger screen size, scale everything to PSD specifications (currently at 60%)
 @media (min-width: 1280px) and (max-width: 1920px) {

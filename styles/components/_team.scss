@@ -63,27 +63,11 @@ section.team {
         }    
     }
     .greenSection::before {
-        content: "";
-        display: inline-block;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 25px 25px 0;
-        border-color: transparent $backGreen transparent transparent;
-        position: absolute;
-        bottom: -24px;
+        @include leftTriangle($backGreen);
         left: calc(50% - 25px); 
     }
     .greenSection::after {
-        content: "";
-        display: inline-block;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 25px 25px 0 0;
-        border-color: $backGreenDark transparent transparent transparent;
-        position: absolute;
-        bottom: -24px;
+        @include rightTriangle($backGreenDark);
         left: 50%;
     }   
 }

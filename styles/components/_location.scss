@@ -29,28 +29,12 @@ section.location {
         }
     }
     .sectionTop::before {
-        content: "";
-        display: inline-block;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 25px 25px 0;
-        border-color: transparent $backYellow transparent transparent;
-        position: absolute;
-        bottom: -24px;
+        @include leftTriangle($backYellow);
         left: calc(50% - 25px);
     }
     .sectionTop::after {
-        content: "";
-        display: inline-block;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 25px 25px 0 0;
-        border-color: $backYellowDark transparent transparent transparent;
-        position: absolute;
-        bottom: -24px;
-        right: calc(50% - 25px);
+        @include rightTriangle($backYellowDark);
+        left: 50%;
     }
     .sectionBottom {
         width: 100%;
@@ -60,18 +44,3 @@ section.location {
         }
     }
 }
-
-//media query for large screen size including PSD specifications
-// @media (min-width: 1280px) and (max-width: 1920px) {
-//     section.location .sectionTop .wrapper {
-//         h4 {
-//             font-size: 4rem;
-//         }
-//         h1 {
-//             font-size: 4vw;
-//         }
-//         p {
-//             font-size: 3rem;
-//         }
-//     }
-// }
